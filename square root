@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+ 
+int sqrt(int input) {
+    if (input == 0 || input == 1)                   
+        return input;                               
+
+    int i = 1, check = 1;
+    while (check <= input) {
+      i++;
+      check = i * i;
+    }
+    return i - 1;                                   
+}
+
+int main() {
+    int input;
+    cout << "Enter the number: ";
+    cin >> input;
+    cout << "The square root is " << sqrt(input) << endl;
+    return 0;
+}
